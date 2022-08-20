@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting Card Designer</title>
+    <!-- CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDNs -->
+    <link rel="stylesheet" href="./style.css">
+ 
+</head>
+
+<body>
+    <h1 class="card-heading">
+        Visting card Designer
+    </h1>
+    <hr>
+    <div class="toolbar">
+        <div class="heading-styles">
+            <h2>Heading Styles</h2>
+            <div class="he">
+                <select name="fonts" id="fonts">
+                    <option value="sans-serif">defaut</option>
+                    <option value="Dancing Script">Dancing Script</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Silkscreen">Silkscreen</option>
+                </select>
+                <div class="selector">
+                    <label for="name"> Select Color </label>
+                    <input type="color" name="Color" id="headingColor">
+                </div>
+                <!-- <div class="selector">
+                    <label> Font-Size :</label>
+                    <input type="range" name="" id="size-heading" min="1" max="5" step="1" onchange="document.getElementById('label-head').textContent=document.getElementById('size-heading').value"> 
+                    <label id="label-head" ></label>
+                </div> -->
+                <button id="header" onclick="document.getElementById('company-name').style.fontFamily =  document.getElementById('fonts').value,
+                document.getElementById('company-name').style.color =  document.getElementById('headingColor').value,
+                document.getElementById('contact-person').style.fontFamily =  document.getElementById('fonts').value,
+                 document.getElementById('contact-person').style.color =  document.getElementById('headingColor').value
+                //  document.getElementById('company-name').style.fontSize = `${document.getElementById('size-heading').value}em`,
+                //  document.getElementById('contact-person').style.fontSize =`${document.getElementById('size-heading').value}em`
+                ">Change </button>
+            </div>
+
+        </div>
+        <div class="title-line">
+            <h2>Title and Line Style</h2>
+            <div class="he">
+                <select name="fonts" id="font-title">
+                    <option value="sans-serif">defaut</option>
+                    <option value="Dancing Script">Dancing Script</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Silkscreen">Silkscreen</option>
+                </select>
+                <div class="selector">
+                    <label for="name"> Select Color </label>
+                    <input type="color" name="Color" id="TL-Color">
+                </div>
+                <button id="header" onclick="document.getElementById('title').style.fontFamily =  document.getElementById('font-title').value,
+                document.getElementById('company-name').style.borderColor =  document.getElementById('TL-Color').value,
+                 document.getElementById('title').style.color =  document.getElementById('TL-Color').value
+                ">Change </button>
+            </div>
+        </div>
+        <div class="backgroud-Col">
+            <h2>Backgroud-color</h2>
+            <div class="he">
+                
+                <div class="selector">
+                    <label for="name"> Select Color </label>
+                    <input type="color" name="Color" id="BG-Color">
+                </div>
+                <button onclick="document.getElementById('visting-card').style.backgroundColor =document.getElementById('BG-Color').value">Change </button>
+            </div>
+        </div>
+        <div class="address-styles">
+            <h2>Address style</h2>
+            <div class="he">
+                <select name="fonts" id="fontAD">
+                    <option value="sans-serif">defaut</option>
+                    <option value="Dancing Script">Dancing Script</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Silkscreen">Silkscreen</option>
+                </select>
+                <div class="selector">
+                    <label for="name"> Select Color </label>
+                    <input type="color" name="Color" id="AD-Color">
+                </div>
+                <button id="header" onclick="document.getElementById('mb').style.fontFamily = document.getElementById('fontAD').value,
+                document.getElementById('st').style.fontFamily = document.getElementById('fontAD').value,
+                document.getElementById('wb').style.fontFamily = document.getElementById('fontAD').value,
+                 document.getElementById('address').style.color =  document.getElementById('AD-Color').value,
+                 document.getElementById('address').style.fontWeight ='bold'
+                ">Change </button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="visting-card" id="visting-card">
+        <h1 class="company-name" id="company-name">Hans EnterPrizes</h1>
+        <div class="company-details">
+            <div class="contact-details">
+                <h2 class="contact-person" id="contact-person">Shreyash Bijlwan</h2>
+                <h3 class="title" id="title"> Founder</h3>
+            </div>
+            <div class="address" id="address">
+                <div class="mobile-number" id="mb">7895672794</div>
+                <div class="street" id="st">Satpuli, pauri garhwal,246172</div>
+                <div class="website" id="wb">www.shreyashbijlwan.com</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
